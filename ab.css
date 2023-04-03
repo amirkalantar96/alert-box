@@ -1,0 +1,64 @@
+:root {
+    --whiteColor: #fff;
+    --blackcolor: #000;
+    --body-bg-color: #faf9f6;
+    --box-bg-color: #e0115f;
+    --box-shadow: rgba(0, 0, 0, 0.3);
+}
+@font-face {
+    font-family: "vazir";
+    src: url("font/Vazir.woff2");
+}
+*, ::before, ::after {
+    box-sizing: border-box;
+    font-family: "vazir";
+    padding: 0;
+    margin: 0;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    height: 100vh;
+    width: 100%;
+    font-family: "vazir";
+    font-size: 1.6em;
+    color: var(--whiteColor);
+    background-color: var(--body-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.opa {
+    height: 15vh;
+    background-color: var(--box-bg-color);
+    border-radius: 10px;
+    font-size: 1.125em;
+    cursor: pointer;
+    box-shadow: 0 0 20px 3px var(--box-shadow);
+    width: 50%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: boxsize 1.5s ease-out forwards;
+}
+@media only screen and (max-width: 767px) {
+    .opa {
+        width: 90%;
+        height: 20vh;
+    }
+}
+@media only screen and (max-width: 200px) {
+    .opa {
+        height: auto;
+    }
+}
+@keyframes boxsize {
+    from {
+        transform: scale(0, 0);
+    }
+    to {
+        transform: scale(1, 1);
+    }
+}
